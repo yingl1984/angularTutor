@@ -1,0 +1,27 @@
+
+
+<!--<div *ngFor="let veg of vegetable">-->
+  <!--<div style="margin-bottom: 2px;border-left: solid 2px; border-right: solid 2px; border-bottom: solid 2px; border-top: solid 2px; display: flex; justify-content: space-around">-->
+    <!--<div><span style="margin-right: 100px" > {{ veg }}</span><span> <button (click)="addVeg1()">添加</button></span></div>-->
+  <!--</div>-->
+  <!--&lt;!&ndash;<div>{{vegName}}</div>&ndash;&gt;-->
+<!--</div>-->
+
+<div><span>{{vegetable[0]}}</span><button (click)="addVeg1()">添加</button></div>
+<div><span>{{vegetable[1]}}</span><button (click)="addVeg2()">添加</button></div>
+<div><span>{{vegetable[2]}}</span><button (click)="addVeg3()">添加</button></div>
+<div><span>{{vegetable[3]}}</span><button (click)="addVeg4()">添加</button></div>
+<div><span>{{vegetable[4]}}</span><button (click)="addVeg5()">添加</button></div>
+<hr>
+<span style="display: inline-block;">
+<span *ngIf="isAddVeg1"> {{vegetable[0]}}</span>
+<span *ngIf="isAddVeg2"> {{vegetable[1]}}</span>
+<span *ngIf="isAddVeg3"> {{vegetable[2]}}</span>
+<span *ngIf="isAddVeg4"> {{vegetable[3]}}</span>
+<span *ngIf="isAddVeg5"> {{vegetable[4]}}</span>
+</span>
+<hr>
+<button (click)="canBeCooked()">可以做成菜吗</button>
+<hr>
+<span *ngIf="canCook">可以成功做大菜啦！</span>
+<span *ngIf="canNotCook">黑暗料理！</span>
